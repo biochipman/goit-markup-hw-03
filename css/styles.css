@@ -369,7 +369,7 @@ p {
 }
 
 .card {
-  outline: solid 1px var(--card-border-color);
+  border-bottom: solid 1px var(--card-border-color);
   margin-right: 30px;
   margin-bottom: 30px;
 }
