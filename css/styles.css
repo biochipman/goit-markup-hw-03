@@ -143,6 +143,7 @@ img {
   text-decoration: none;
 }
 
+.item > .header-link:link,
 .item > .header-link:visited {
   color: var(--main-font-color);
 }
