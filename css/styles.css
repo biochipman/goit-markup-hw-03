@@ -33,8 +33,13 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -51,8 +56,7 @@ p {
 }
 
 .list {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding-left: 0;
   list-style: none;
 }
@@ -62,6 +66,12 @@ p {
   padding-bottom: 94px;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .capitalize {
   text-transform: uppercase;
 }
@@ -69,13 +79,6 @@ p {
 /* Стилі шапки */
 .menu {
   border-bottom: 1px solid var(--border-color);
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .main-nav > .navi {
@@ -198,6 +201,7 @@ p {
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 
@@ -216,11 +220,11 @@ p {
 }
 
 /* Стилі особливостей */
-.features-items {
+.features-list {
   display: flex;
 }
 
-.features-items > .item:not(:last-child) {
+.features-list > .features-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -237,35 +241,39 @@ p {
 }
 
 /* Чим ми займаємося */
-.activities-items {
+.activities {
+  padding-top: 0;
+}
+
+.activities-list {
   display: flex;
 }
 
-.activities-items > .item:not(:last-child) {
+.activities-list > .activities-item:not(:last-child) {
   margin-right: 30px;
-}
-.item > .activities-img {
-  display: block;
 }
 
 /* Стилі нашої команди */
 .team {
   background-color: var(--btn-secondary-color);
-  height: 648px;
 }
 
-.team-items {
+.team-list {
   display: flex;
 }
 
-.team-items > .item {
+.team-list > .team-item {
   background-color: var(--main-bgd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-items > .item:not(:last-child) {
+.team-list > .team-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.team-desc {
+  padding: 30px 0;
 }
 
 .team-name {
@@ -278,17 +286,10 @@ p {
 }
 
 .team-role {
-  padding-bottom: 30px;
-
   color: var(--paragraph-color);
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
-}
-
-.team-image {
-  display: block;
-  margin-bottom: 30px;
 }
 
 /* Стилі підвалу */
@@ -307,7 +308,7 @@ p {
   color: var(--main-bgd-color);
 }
 
-.item > .address-link {
+.address-item > .address-link {
   color: var(--main-bgd-color);
   font-style: normal;
   font-weight: 400;
@@ -315,12 +316,12 @@ p {
   text-decoration: none;
 }
 
-.item > .address-link:hover,
-.item > .address-link:focus {
+.address-item > .address-link:hover,
+.address-item > .address-link:focus {
   color: var(--primary-logo-color);
 }
 
-.item > .footer-link {
+.address-item > .footer-link {
   color: var(--contacts-color);
   font-style: normal;
   font-weight: 400;
@@ -328,8 +329,8 @@ p {
   text-decoration: none;
 }
 
-.item > .footer-link:hover,
-.item > .footer-link:focus {
+.address-item > .footer-link:hover,
+.address-item > .footer-link:focus {
   color: var(--primary-logo-color);
 }
 
@@ -346,6 +347,8 @@ p {
 }
 
 .btn-secondary {
+  padding: 6px 22px;
+
   font-family: inherit;
   color: var(--main-font-color);
   background-color: var(--btn-secondary-color);
@@ -354,6 +357,7 @@ p {
   line-height: calc(26 / 16);
   letter-spacing: 0.03em;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 
@@ -369,7 +373,6 @@ p {
 }
 
 .card {
-  border-bottom: solid 1px var(--card-border-color);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -382,23 +385,20 @@ p {
   margin-bottom: 0;
 }
 
-.card-img {
-  display: block;
-  margin-bottom: 20px;
+.card-desc {
+  padding: 20px 24px;
+  border: solid 1px var(--card-border-color);
 }
 
 /* Стилі заголовків портфоліо */
-.portfolio-title {
+.card-title {
   margin-bottom: 4px;
-  padding-left: 24px;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
 }
 
-.portfolio-desc {
-  padding-left: 24px;
-  padding-bottom: 20px;
+.card-type {
   color: var(--paragraph-color);
   font-size: 16px;
   line-height: calc(30 / 16);
