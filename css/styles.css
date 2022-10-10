@@ -309,6 +309,10 @@ img {
   color: var(--main-bgd-color);
 }
 
+.address-list > .address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .address-item > .address-link {
   color: var(--main-bgd-color);
   font-style: normal;
